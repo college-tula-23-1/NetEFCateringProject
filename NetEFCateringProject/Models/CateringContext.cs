@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NetEFCateringProject.Models.ModelsConfiguration;
+using NetEFCateringProject.Models.Configurations;
+using NetEFCateringProject.Models.References;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,16 @@ namespace NetEFCateringProject.Models
 {
     public class CateringContext : DbContext
     {
+        public DbSet<ProductCategory> ProductCategories { get; set; } = null!;
+        public DbSet<DishCategory> DishCategories { get; set; } = null!;
+        public DbSet<Unit> Units { get; set; } = null!;
+
+        public DbSet<Provider> Providers { get; set; } = null!;
+        public DbSet<Dish> Dishes { get; set; } = null!;
+        public DbSet<Product> Products { get; set; } = null!;
+        public DbSet<Supplie> Supplies { get; set; } = null!;
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -20,11 +31,19 @@ namespace NetEFCateringProject.Models
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.ApplyConfiguration(new ProductCategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new DishCategoryConfiguration());
             modelBuilder.ApplyConfiguration(new UnitConfiguration());
-            modelBuilder.ApplyConfiguration(new CategoryProductConfiguration());
-            modelBuilder.ApplyConfiguration(new CategoryDishConfiguration());
-            modelBuilder.ApplyConfiguration(new SupplierCongiguration());
+
+            modelBuilder.ApplyConfiguration(new ProviderConfiguration());
             modelBuilder.ApplyConfiguration(new DishConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new SupplieConfiguration());
+
+            modelBuilder.ApplyConfiguration(new ProductDishConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductProviderConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductSupplieConfiguration());
+            
         }
     }
 }

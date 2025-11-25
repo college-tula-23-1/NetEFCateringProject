@@ -1,5 +1,4 @@
 ﻿using NetEFCateringProject.Models.MiddleEntities;
-using NetEFCateringProject.Models.References;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace NetEFCateringProject.Models
 {
-    public class Dish
+    public class Provider
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public DishCategory? Category { get; set; }
-        public int? CategoryId { get; set; }
-        public decimal? Price { get; set; }
         public bool IsActive { get; set; } = true;
+        public ICollection<Supplie> Supplies { get; set; } = new List<Supplie>();
 
-        public ICollection<ProductDish> ProductDishes { get; set; } = new List<ProductDish>();
+        public ICollection<ProductProvider> ProductProviders { get; set; }
+            = new List<ProductProvider>();
     }
 }

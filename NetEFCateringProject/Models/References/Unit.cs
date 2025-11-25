@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetEFCateringProject.Models
+namespace NetEFCateringProject.Models.References
 {
-    public class CategoryDish
+    public class Unit
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public List<Dish>? Dishes { get; set; }
+        public string Abbr { get; set; } = null!;
+
+        public ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }
