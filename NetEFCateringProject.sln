@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetEFHRProject", "NetEFHRPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetEFInheritProject", "NetEFInheritProject\NetEFInheritProject.csproj", "{A018E7D0-0385-4E96-9331-9857857BD8DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetEFMiddleRelationsProject", "NetEFMiddleRelationsProject\NetEFMiddleRelationsProject.csproj", "{7CC8255D-8FD5-4A94-88AC-F31F3CB5A5A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A018E7D0-0385-4E96-9331-9857857BD8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A018E7D0-0385-4E96-9331-9857857BD8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A018E7D0-0385-4E96-9331-9857857BD8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC8255D-8FD5-4A94-88AC-F31F3CB5A5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC8255D-8FD5-4A94-88AC-F31F3CB5A5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC8255D-8FD5-4A94-88AC-F31F3CB5A5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC8255D-8FD5-4A94-88AC-F31F3CB5A5A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
