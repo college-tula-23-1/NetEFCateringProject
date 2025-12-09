@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NetEFCateringProject.Models.Configurations;
+using NetEFCateringProject.Models.MiddleEntities;
 using NetEFCateringProject.Models.References;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace NetEFCateringProject.Models
         public DbSet<Dish> Dishes { get; set; } = null!;
         public DbSet<Product> Products { get; set; } = null!;
         public DbSet<Supplie> Supplies { get; set; } = null!;
+
+        //public DbSet<ProductProvider> ProductsProviders { get; set; } = null!;
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
